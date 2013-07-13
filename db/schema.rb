@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130713094114) do
+ActiveRecord::Schema.define(version: 20130713095354) do
 
   create_table "authentications", force: true do |t|
     t.integer  "user_id",    null: false
@@ -22,10 +22,16 @@ ActiveRecord::Schema.define(version: 20130713094114) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "username",   null: false
+    t.string   "username",                   null: false
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "last_login_at"
+    t.datetime "last_logout_at"
+    t.datetime "last_activity_at"
+    t.string   "last_login_from_ip_address"
   end
+
+  add_index "users", ["last_logout_at", "last_activity_at"], name: "index_users_on_last_logout_at_and_last_activity_at"
 
 end
