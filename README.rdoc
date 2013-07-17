@@ -15,6 +15,6 @@
 ===
 
 need .env
-FB_APP_ID=xxx
-FB_APP_SECRET=xxx
-FB_CALLBACK_URL='http://localhost:5000/oauth/callback?provider=facebook'
+  FB_APP_ID=xxx
+  FB_APP_SECRET=xxx
+  FB_CALLBACK_URL='http://localhost:5000/oauth/callback?provider=facebook'
