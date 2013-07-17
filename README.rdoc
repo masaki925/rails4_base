@@ -18,3 +18,28 @@ need .env
   FB_APP_ID=xxx
   FB_APP_SECRET=xxx
   FB_CALLBACK_URL='http://localhost:5000/oauth/callback?provider=facebook'
+
+===
+
+operations
+
+  bundle install
+  bower install
+  
+  # run web server
+  foreman start
+  
+  # run test server
+  spork
+  
+  # run test
+  rake spec
+  
+  # like debugger
+  def
+    ..
+    binding.remote_pry
+  end
+  
+  $ pry-remote
+
